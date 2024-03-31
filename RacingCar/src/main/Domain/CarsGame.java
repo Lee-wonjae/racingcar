@@ -3,18 +3,16 @@ package main.Domain;
 import java.util.List;
 
 public class CarsGame {
-    private List<Car> cars;
+    public List<Car> cars;
     private int gameNum;
-    public CarsGame(List<Car> cars, int gameNum) {
-        this.cars = cars;
-        this.gameNum = gameNum;
-    }
-
-    public List<Car> GameStart(List<Car> cars, int gameNum) {
-        List<Car> newcars = null;
-        for (int i = 0; i < cars.toArray().length; i++) {
-            newcars = (List<Car>) new CarGame(cars.get(i), gameNum);
+    public CarsGame(List<String> nameList){
+        for (int i = 0; i < nameList.toArray().length; i++) {
+            cars.set(i,new Car(nameList.get(i)));
         }
-        return newcars;
+    }
+    public void GameStart( int gameNum) {
+        for (int i = 0; i < cars.toArray().length; i++) {
+            cars = (List<Car>) new CarGame(cars.get(i), gameNum);
+        }
     }
 }

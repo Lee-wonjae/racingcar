@@ -9,7 +9,7 @@ import main.View.*;
 
 
 public class Controller {
-    private final Input input;
+    private static Input input = null;
     private final Output output;
 
 
@@ -17,4 +17,11 @@ public class Controller {
         this.input = input;
         this.output = output;
     }
+
+    public static void run() {
+        CarsGame carsgame = new CarsGame(input.readCarNames());
+        carsgame.GameStart(input.readCount());
+        System.out.println(carsgame.cars);
+    }
+
 }
