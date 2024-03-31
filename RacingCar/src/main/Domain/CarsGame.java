@@ -9,7 +9,8 @@ public class CarsGame {
         this.cars = cars;
         this.gameNum = gameNum;
     }
-    private List<Car> GameStart(List<Car> cars, int gameNum) {
+
+    public List<Car> GameStart(List<Car> cars, int gameNum) {
         List<Car> newcars = null;
         for (int i = 0; i < cars.toArray().length; i++) {
             newcars = (List<Car>) new CarGame(cars.get(i), gameNum);
