@@ -1,2 +1,5 @@
-package main.Controller;public class controller {
+package main.Controller;
+
+public class Controller {
+
 }

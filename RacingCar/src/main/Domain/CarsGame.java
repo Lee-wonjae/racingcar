@@ -9,10 +9,11 @@ public class CarsGame {
         this.cars = cars;
         this.gameNum = gameNum;
     }
-    private List<Car> GameStart(List<Car> cars, int gameNum){
-        for(int i=0;i<cars.toArray().length;i++){
-            CarGame cargame =new CarGame(cars.get(i),gameNum);
+    private List<Car> GameStart(List<Car> cars, int gameNum) {
+        List<Car> newcars = null;
+        for (int i = 0; i < cars.toArray().length; i++) {
+            newcars = (List<Car>) new CarGame(cars.get(i), gameNum);
         }
-        return cars;
+        return newcars;
     }
 }
